@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.SignUpActivity"
+    tools:showIn="@layout/activity_sign_up">
+
+    <com.ifocus.papple.views.gradientview.GradientView
+        android:id="@+id/signUpGradView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:endColor="@color/colorPrimaryDark"
+        app:gradRadScreenPercentage="50%"
+        app:startColor="@color/colorPrimaryLight" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.ifocus.papple.views.textviewplus.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/papple"
+                android:textColor="#FFFFFF"
+                android:textSize="50sp"
+                app:customFont="fonts/GrandHotel-Regular.otf" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:textColor="@color/editTextColorMain"
+                    android:textColorHint="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/prompt_username"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="@color/editTextColorMain"
+                    android:textColorHint="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/prompt_password"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="@color/editTextColorMain"
+                    android:textColorHint="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupFname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="@string/prompt_optional_firstname"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="@color/editTextColorMain"
+                    android:textColorHint="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupLname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/prompt_optional_lastname"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textColor="@color/editTextColorMain"
+                    android:textColorHint="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:text="@string/prompt_signup_as"
+                android:textColor="@android:color/white" />
+
+            <Spinner
+                android:id="@+id/signupUserType"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="2"
+                android:prompt="@string/prompt_bloodgroup" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_column="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:text="@string/prompt_birthdate"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/signupBirthdateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextAppearance="@style/hintText">
+
+                    <EditText
+                        android:id="@+id/signupBirthDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/prompt_date_day"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:textColor="@color/editTextColorMain"
+                        android:textColorHint="@color/editTextColorMain"
+                        app:hintTextAppearance="@style/hintText" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/date_seperator" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextAppearance="@style/hintText">
+
+                    <EditText
+                        android:id="@+id/signupBirthMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/prompt_date_month"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:textColor="@color/editTextColorMain"
+                        android:textColorHint="@color/editTextColorMain"
+                        app:hintTextAppearance="@style/hintText" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="@string/date_seperator" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:hintTextAppearance="@style/hintText">
+
+                    <EditText
+                        android:id="@+id/signupBirthYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:focusable="false"
+                        android:hint="@string/prompt_date_year"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="@color/editTextColorMain"
+                        android:textColorHint="@color/editTextColorMain"
+                        app:hintTextAppearance="@style/hintText" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:text="@string/prompt_bloodgroup"
+                        android:textColor="@android:color/white" />
+
+                    <Spinner
+                        android:id="@+id/signupBgroup"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:prompt="@string/prompt_bloodgroup" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:text="@string/prompt_martialstatus"
+                        android:textColor="@android:color/white" />
+
+                    <Spinner
+                        android:id="@+id/signupMstatus"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:prompt="@string/prompt_martialstatus" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:text="@string/prompt_ward"
+                        android:textColor="@android:color/white" />
+
+                    <Spinner
+                        android:id="@+id/signupWardname"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:prompt="@string/prompt_ward" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:text="@string/prompt_prooftype"
+                        android:textColor="@android:color/white" />
+
+                    <Spinner
+                        android:id="@+id/signupProoftype"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:prompt="@string/prompt_prooftype" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/prompt_phonenumber"
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:hintTextAppearance="@style/hintText">
+
+                <EditText
+                    android:id="@+id/signupProofDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/prompt_proofnumber"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="@color/editTextColorMain"
+                    android:textSize="@dimen/edittext_small" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_register"
+                android:textColor="@color/editTextColorMain" />
+
+            <Button
+                android:id="@+id/backtoLoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryLight"
+                android:text="@string/prompt_already_member"
+                android:textColor="@color/editTextColorMain" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

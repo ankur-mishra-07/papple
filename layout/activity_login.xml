@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.LoginActivity">
+
+    <com.ifocus.papple.views.gradientview.GradientView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:centerX="50%"
+        app:centerY="50%"
+        app:endColor="@color/colorPrimaryDark"
+        app:gradRadScreenPercentage="50%"
+        app:startColor="@color/colorPrimaryLight" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ifocus.papple.views.textviewplus.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:text="@string/papple"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_size_logo"
+                app:customFont="fonts/GrandHotel-Regular.otf" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:hintTextAppearance="@style/hintText"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/loginId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:shadowColor="@color/colorAccentDark"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:hintTextAppearance="@style/hintText"
+                android:layout_weight="3">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:hint="@string/prompt_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:shadowColor="@color/colorAccent"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="@color/colorAccentDark"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                card_view:cardCornerRadius="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:shadowColor="@color/colorPrimaryLight"
+                    android:text="@string/login"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+            <com.ifocus.papple.views.textviewplus.TextViewPlus
+                android:id="@+id/forgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/forgot_credentials"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:underlined="true" />
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryLight"
+                card_view:cardCornerRadius="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorPrimaryLight"
+                    android:gravity="center"
+                    android:text="@string/signup"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
